@@ -307,8 +307,7 @@ ggplot() +
     x = "Year",
     y = "Rainfall values (mm)",
     caption = str_wrap(
-      "Hydrological drivers of larval productivity. Maputo’s frequent, moderate rainfall supports stable carrying capacity (K) for aquatic stages. Conversely, the high-intensity rainfall spikes in Kruger (exceeding 50mm) likely trigger (flushing) events that physically disrupt breeding sites, leading to temporary but sharp declines in mosquito emergence rates. Source: GHCN Daily (PRCP)",
-      width = 150)
+      "Hydrological drivers of larval productivity. Maputo’s frequent, moderate rainfall supports stable carrying capacity (K) for aquatic stages. Conversely, the high-intensity rainfall spikes in Kruger (exceeding 50mm) likely trigger (flushing) events that physically disrupt breeding sites, leading to temporary but sharp declines in mosquito emergence rates. Source: GHCN Daily (PRCP)")
     )
 ```
 We incorporate these values into the mathematical model. Note that other models may include variables such as altitude and humidity. For this example, we will explore the mosquito populations and disease prevalence in both areas, as influenced by their distinct environmental conditions. We achieve this by assuming the same epidemiological parameters and starting host populations for both areas, and only varying the inputs for rainfall and temperature.
@@ -498,7 +497,7 @@ df |>
     x = "Year",
     y = "Population size",
     colour = "Population",
-    caption = str_wrap("Vector population seasonality. In Limpopo, mosquito density (M) follows an opportunistic (boom-and-bust) cycle in response to rainfall-driven habitat availability. Maputo’s sustained population levels, particularly between 2020 and 2022, suggest favorable environmental conditions that prevent the population from crashing during the dry season, ensuring year-round biting pressure. Source: SEACR-SEI Model.", width = 150)
+    caption = str_wrap("Vector population seasonality. In Limpopo, mosquito density (M) follows an opportunistic (boom-and-bust) cycle in response to rainfall-driven habitat availability. Maputo’s sustained population levels, particularly between 2020 and 2022, suggest favorable environmental conditions that prevent the population from crashing during the dry season, ensuring year-round biting pressure. Source: SEACR-SEI Model.")
   )
 
 ```
@@ -522,7 +521,7 @@ df |>
     title = "Daily symptomatic cases values in the human population", 
     x = "Year",
     y = "Number of cases",
-    caption = str_wrap("Biological limits of transmission stability. Maputo maintains a perennial symptomatic burden because environmental conditions rarely fall below the threshold for parasite development. In contrast, Limpopo’s transmission is strictly seasonal; case numbers drop to near zero during winter thermal troughs, indicating that cold-stress on the parasite and vector acts as a natural annual (break) in the transmission chain. Source: SEACR-SEI Model.", width = 150)
+    caption = str_wrap("Biological limits of transmission stability. Maputo maintains a perennial symptomatic burden because environmental conditions rarely fall below the threshold for parasite development. In contrast, Limpopo’s transmission is strictly seasonal; case numbers drop to near zero during winter thermal troughs, indicating that cold-stress on the parasite and vector acts as a natural annual (break) in the transmission chain. Source: SEACR-SEI Model.")
   ) +
   ylim(0, NA)
 ```

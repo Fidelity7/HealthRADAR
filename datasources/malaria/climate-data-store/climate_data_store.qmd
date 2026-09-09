@@ -284,11 +284,10 @@ ggplot(data = era5_grid_processed) +
   ) +
   theme_health_radar() +
   labs(
-    title = "Daily National Average Temperature Values in Nigeria from 2010 to 2025",
+    title = "Daily National Average Temperature Values in Nigeria \nfrom 2010 to 2025",
     x = "Year",
     y = "Temperature values (Celsius °)",
-    caption = str_wrap("Daily temperatures float consistently between 23 and 35 degree celsius, maintaining an ambient environment that keeps parasite replication and extrinsic incubation continuously active throughout the year.)",
-      width = 150)
+    caption = str_wrap("Daily temperatures float consistently between 23 and 35 degree celsius, maintaining an ambient environment that keeps parasite replication and extrinsic incubation continuously active throughout the year.")
   ) +
   ylim(0, NA)
 
@@ -299,14 +298,14 @@ ggplot(data = era5_grid_processed) +
 ggplot(data = era5_grid_processed) +
   geom_point(
     aes(x = DATE, y = PRCP),
-    colour = "#1E4D2B", alpha = 0.6, size = 0.8
+    colour = "#1E4D2B", alpha = 0.5, size = 0.8
   ) +
   theme_health_radar() +
   labs(
     title = "Daily Precipitation in Nigeria from 2010 to 2025",
     x = "Year",
     y = "Rainfall values (mm)",
-    caption = str_wrap("Daily precipitation averages oscillate predictably between 0 and 6 mm, where regular rainfall expands aquatic breeding capacity, but intense localised storms exceeding 30 mm physically wash away developing larvae.", width = 150)
+    caption = str_wrap("Daily precipitation averages oscillate predictably between 0 and 6 mm, where regular rainfall expands aquatic breeding capacity, but intense localised storms exceeding 30 mm physically wash away developing larvae.", width = 80)
   ) +
   ylim(0, NA)
 ```
@@ -397,7 +396,7 @@ df_nigeria_results |>
   labs(
     title = "National Mosquito Vector Populations Over Time in Nigeria", 
     x = "Year", y = "Population Size",
-    caption = str_wrap("Resolving spatial variation captures a pronounced annual drop in adult mosquito density when relative humidity falls below 55%, followed by rapid, rain-driven resurgences that peak near 0.25M vectors during synchronised national breeding windows.", width = 150)
+    caption = str_wrap("Resolving spatial variation captures a pronounced annual drop in adult mosquito density when relative humidity falls below 55%, followed by rapid, rain-driven resurgences that peak near 0.25M vectors during synchronised national breeding windows.")
   )
 ```
 
