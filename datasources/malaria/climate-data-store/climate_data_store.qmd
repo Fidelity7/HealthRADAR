@@ -370,7 +370,7 @@ parameters    <- c(b = 0.72, c = 0.52, r = 1/21, rho = 1/150, delta = 1/140, zet
 
 # Run the spatially corrected system
 out_Nigeria <- ode(y = initial_state, times = times, func = seacr_era5_ensemble, parms = parameters,
-                   a_vec = forced_a, gamma_m_vec = forced_gamma_m, ovi_vec = forced_ovi, mu_m_vec = forced_mu_m, K_vec = forced_K_scale)
+ a_vec = forced_a, gamma_m_vec = forced_gamma_m, ovi_vec = forced_ovi, mu_m_vec = forced_mu_m, K_vec = forced_K_scale)
 
 df_nigeria_results <- as_tibble(as.data.frame(out_Nigeria)) |> 
   mutate(P = S + E + A + C + R + G,
